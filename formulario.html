@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cadastro de Empresas</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 20px;
+        }
+        .form-group {
+            margin-bottom: 15px;
+        }
+        label {
+            display: block;
+            font-weight: bold;
+        }
+        input {
+            width: 100%;
+            padding: 8px;
+            margin-top: 5px;
+        }
+        button {
+            padding: 10px 20px;
+            background-color: #007BFF;
+            color: white;
+            border: none;
+            cursor: pointer;
+        }
+        .success, .error {
+            margin-top: 20px;
+            padding: 10px;
+            display: none;
+        }
+        .success {
+            color: green;
+        }
+        .error {
+            color: red;
+        }
+    </style>
+</head>
+<body>
+    <h1>Cadastro de Empresas</h1>
+    <form id="cadastro-form" action="cadastrar.php" method="POST">
+        <div class="form-group">
+            <label for="nome">Nome:</label>
+            <input type="text" id="nome" name="nome" required>
+        </div>
+        <div class="form-group">
+            <label for="cep">CEP:</label>
+            <input type="text" id="cep" name="cep" required>
+        </div>
+        <div class="form-group">
+            <label for="rua">Rua:</label>
+            <input type="text" id="rua" name="rua" required>
+        </div>
+        <div class="form-group">
+            <label for="numero">Número:</label>
+            <input type="text" id="numero" name="numero" required>
+        </div>
+        <div class="form-group">
+            <label for="bairro">Bairro:</label>
+            <input type="text" id="bairro" name="bairro" required>
+        </div>
+        <div class="form-group">
+            <label for="estado">Estado:</label>
+            <input type="text" id="estado" name="estado" required>
+        </div>
+        <div class="form-group">
+            <label for="whatsapp">WhatsApp:</label>
+            <input type="text" id="whatsapp" name="whatsapp" required>
+        </div>
+        <div class="form-group">
+            <label for="cnpj_cpf">CNPJ/CPF:</label>
+            <input type="text" id="cnpj_cpf" name="cnpj_cpf" required>
+        </div>
+        <button type="submit">Cadastrar</button>
+    </form>
+    <div class="success" id="success-message">Cadastro realizado com sucesso!</div>
+    <div class="error" id="error-message">Erro ao cadastrar. Verifique os dados.</div>
+</body>
+</html>
